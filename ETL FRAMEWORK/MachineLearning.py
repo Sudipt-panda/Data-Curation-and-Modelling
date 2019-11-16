@@ -123,7 +123,7 @@ def Analysis(df_preprocessed):
     DT = DecisionTreeRegressor(max_depth=15, min_samples_leaf=100)
     modelfit(DT, train_df, test_df, predictors, target, IDcol,'DT.csv','Decision Tree')
 
-    RF = DecisionTreeRegressor(max_depth=8, min_samples_leaf=150)
+    RF = RandomForestClassifier(max_depth=8, min_samples_leaf=150)
     modelfit(RF, train_df, test_df, predictors, target, IDcol,'RF.csv','Random Forest')
 
 
